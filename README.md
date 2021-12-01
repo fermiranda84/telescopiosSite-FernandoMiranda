@@ -1,3 +1,8 @@
 # Sitio web Shop Telescopios
-## Repositorio Sitio Telescopios
-Desarrollo de sitio web enteramente con CSS, y HTML. Full responsive (Mobile First). Metodologia BEM
+Desarrollo de sitio web Full responsive (Mobile First). Metodologia BEM.
+
+## Link al sitio web deployed: https://fermiranda84.github.io/telescopiosSite/
+
+## HTML
+## CSS
+
