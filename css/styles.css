@@ -1,0 +1,535 @@
+/* Inicializacion para sacar el padding y margin por defecto */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fuentes utilizadas en el sitio */
+@font-face {
+    font-family: fuenteProyecto;
+    src: url(../fonts/Montserrat-Thin.ttf);
+}
+
+@font-face {
+    font-family: fuenteMenu;
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+
+/* Propiedades para el sitio en general */
+body {
+    background: url(../images/starsBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #252526;
+    font-family: fuenteProyecto;
+} 
+
+/* Links sin estilo por defecto */
+a {
+    text-decoration: none;
+}
+
+/* Listas sin bullets */
+ul{
+    list-style-type: none;
+}
+
+/* Estilos de la barra de navegacion */
+.nav {
+    font-family: fuenteMenu;
+    border-bottom: white solid 1px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.25)
+}
+
+.nav__link__principales{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__link {
+    
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.nav__link--vertical {
+    text-align: right;
+}
+
+.nav__link a {
+    color: white;
+}
+
+.nav__link--activo {
+    font-weight: bold;
+}
+
+.nav__img {
+    width: 50px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.nav__link__secundarios {
+    display: none;
+}
+
+.nav__link__iconoMenu {
+    color: white;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-left: auto;
+}
+
+.nav__link__secundarios--show {
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.25)
+}
+
+/* Estilos para el banner con imagen y texto del sitio */
+.slide {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-areas:
+    "telescopios" 
+    "moon"
+    ;
+}
+
+.slide__imagen{
+    grid-area: moon;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    position: relative;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+    100% {
+        opacity: 1;
+        right: 0px;
+     }
+}
+
+.slide__imagen__moon{
+    width: 80%;
+}
+
+.slide__textos {
+    grid-area: telescopios;
+    margin-top: 7rem;
+    animation: fadeInText ease 3s;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+
+.slide__titulo{
+    font-size: 9vw;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px black;
+}
+
+.slide__bajada{
+    font-size: 4vw;
+}
+
+/* Estilos para la seccion prinicipal y los elementos dentro */
+.seccionPrincipal{
+    width: 75vw;
+    margin: 2rem auto 0 auto;
+    margin-top: 2rem;
+}
+
+.seccionPrincipal__items {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "titulo" 
+    "itemUno"
+    "itemDos"
+    "itemTres"
+    ;
+}
+
+.seccionPrincipal__titulo {
+    font-size: 5vw;
+    color: white;
+    text-transform: uppercase;
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.seccionPrincipal__items {
+    margin-top: 2rem;
+}
+
+.seccionPrincipal__item {
+    margin: 1.5rem;
+    text-align: center;
+}
+
+#seccionPrincipal__itemUno{
+    grid-area: itemUno;
+}
+
+#seccionPrincipal__itemDos{
+    grid-area: itemDos;
+}
+
+#seccionPrincipal__itemTres{
+    grid-area: itemTres;
+}
+
+.seccionPrincipal__contenedorInfo {
+    margin-top: 2rem;
+    color: white;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "titulo" 
+    "parrafos"
+    "foto"
+    ;
+}
+
+.seccionPrincipal__contenedorHistoria {
+    margin-top: 2rem;
+    color: white;
+    grid-template-areas:
+    "titulo" 
+    "parrafoUno"
+    "foto"
+    "parrafoDos"
+    "parrafoTres"
+    ;
+}
+
+.seccionPrincipal__imgHistoria{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.seccionPrincipal__parrafoHistoria {
+    margin-bottom: 20px;
+}
+
+#parrafoUno{
+    grid-area: parrafoUno;
+}
+
+#parrafoDos{
+    grid-area: parrafoDos;
+}
+
+#parrafoTres{
+    grid-area: parrafoTres;
+}
+
+#imagenHistoria{
+    grid-area: foto;
+}
+
+.seccionPrincipal__imagen{
+    grid-area: foto;
+    margin-top: 1rem;
+}
+
+.seccionPrincipal__imagen--ancho{
+    width: 100%;
+}
+
+.seccionPrincipal__subtitulo {
+    margin-top: 0.75rem;
+    color: orangered;
+}
+
+.seccionPrincipal__imagen iframe{
+    width: 100%;
+    height: 48vh;
+    border: 0;
+}
+
+.seccionPrincipal__texto {
+    grid-area: parrafos;
+}
+
+#seccionPrincipal__formulario {
+    margin-top: 2rem;
+    color: white;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "titulo" 
+    "inputs"
+    "textarea"
+    ;
+}
+
+#seccionPrincipal__formulario__inputs {
+    grid-area: inputs;
+}
+
+#seccionPrincipal__formulario__textarea {
+    grid-area: textarea;
+}
+
+/* Estilos para los items que muestro en las secciones */
+.imagenItem {
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px black;
+    width: 30vw;
+}
+
+.imagenItem--destacada {
+    width: 45vw;
+}
+
+.tituloItem{
+    color: white;
+    margin-top: 1rem;
+}
+
+.infoItem{
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.tituloItem--destacado{
+    font-size: 1.25rem;
+}
+
+.infoItem a{
+    color: orangered;
+}
+
+/* Estilos para el pie del sitio */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer__copyright span {
+    font-weight: bold;
+}
+
+.footer__link {
+    display: none;
+}
+
+.footer__link a {
+    color: white;
+}
+
+/* Estilos para el formulario de contacto */
+.labelFormulario, .inputFormulario, .selectFormulario {
+    padding: 2px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], select {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 2.5rem;
+    
+}
+
+.boton {
+    margin: 0.25rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.inputFormulario--dimensiones {
+    width: 100%;
+    height: 14rem;
+}
+
+.botonesFormulario{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.enviar {
+    background-color: orangered;
+    color: white;
+}
+
+/*Responsive*/
+
+/*Tablets*/
+@media screen and (min-width:768px) {
+
+    .nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav__link__secundarios {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav__link__iconoMenu {
+        display: none;
+    }
+
+    .slide {
+        grid-template-areas:
+        "telescopios moon";
+        grid-template-columns: 2fr 1.25fr;
+    }
+
+    .slide__titulo{
+        font-size: 8vw;
+    }
+
+    .slide__bajada{
+        font-size: 3vw;
+    }
+
+    .slide__imagen{
+       margin-top: 5rem;
+    }
+
+    .slide__textos{
+        margin-top: 11rem;
+     }
+
+    .slide__imagen__moon{
+        width: 100%;
+     }
+
+    .seccionPrincipal__items {
+        grid-template-areas:
+        "titulo titulo" 
+        "itemUno itemDos"
+        "itemTres itemTres"
+        ;
+    }
+
+    .seccionPrincipal__titulo {
+        font-size: 3vw;
+        justify-content: start;
+    }
+
+    .imagenItem--destacada {
+        width: 30vw;
+    } 
+    
+    .tituloItem--destacado{
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        justify-content: start;
+    }
+
+    .footer__link {
+        display: flex;
+        margin-left: auto;
+    }
+
+    #seccionPrincipal__formulario {
+        grid-template-columns: 1.25fr 2fr;
+        gap: 30px;
+        grid-template-areas:
+        "titulo titulo" 
+        "inputs textarea"
+        ;
+    }
+
+    .labelFormulario, .inputFormulario, .selectFormulario {
+        margin-top: 5px;
+    }
+
+    .botonesFormulario{
+        justify-content: end;
+        margin-top: 10px;
+    }
+ 
+}
+
+
+/*Desktops*/
+@media screen and (min-width:1200px) {
+
+    .slide__titulo{
+        font-size: 7vw;
+    }
+
+    .slide__bajada{
+        font-size: 2vw;
+    }
+
+    .slide__textos{
+        margin-top: 19rem;
+     }
+
+    .seccionPrincipal__items {
+        grid-template-areas:
+        "titulo titulo titulo" 
+        "itemUno itemDos itemTres"
+        ;
+    }
+
+    .seccionPrincipal__titulo {
+        font-size: 2.5vw;
+    }
+
+    .imagenItem--destacada {
+        width: 20vw;
+    }
+
+    .seccionPrincipal__contenedorInfo {
+        gap: 50px;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas:
+        "titulo titulo" 
+        "parrafos foto"
+        ;
+    }
+
+    .imagenItem {
+        width: 15vw;
+    }
+
+    .seccionPrincipal__contenedorInfo--mapa {
+        grid-template-columns: 1fr 2fr;
+    }
+        
+}

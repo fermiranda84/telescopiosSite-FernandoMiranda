@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="../js/topNav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shop Telescopios - Contacto</title>
+</head>
+<body>
+
+     <!--Seccion encabezado que incluye el nav con una lista desordenada y una imagen + texto-->
+     <header id="encabezado">
+
+        <nav class="nav">
+            <ul class="nav__link__principales">
+                <li class="nav__link"><a href="../index.html"><img class="nav__img" src="../images/logo-01.png" alt="Telescope Logo">Shop de Telescopios</a></li>
+                <li class="nav__link nav__link__iconoMenu"><a href="javascript:void(0);" onclick="mostrarMenu()"><i class="fa fa-bars"></i></a></li>
+            </ul>
+            <ul id="linksSecundarios" class="nav__link__secundarios">
+                <li class="nav__link nav__link--vertical"><a href="./nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav__link nav__link--vertical"><a href="./productos.html">Productos</a></li>
+                <li class="nav__link nav__link--vertical"><a href="./historia.html">Historia</a></li>
+                <li class="nav__link nav__link--vertical nav__link--activo"><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="slide">
+            <div class="slide__textos">
+                <h1 class="slide__titulo">Telescopios</h1>
+                <p class="slide__bajada">Mirá tu mundo, de otra manera.</p>
+            </div>
+            <div class="slide__imagen"><img class="slide__imagen__moon" src="../images/pluton.png" alt="Moon"></div>
+        </div>
+
+    </header>
+
+
+    <!--Seccion principal con el formulario de contacto-->
+    <section class="seccionPrincipal" id="contacto">
+            <form id="seccionPrincipal__formulario" action="#" method="post">
+
+                <h2 class="seccionPrincipal__titulo">Escribinos</h2>
+
+                <div id="seccionPrincipal__formulario__inputs" class="seccionPrincipal__formulario">
+                    <label class="labelFormulario" for="nombre">Nombre</label>
+                    <input class="inputFormulario" type="text" name="nombre" placeholder="Ingresá tu nombre" required>
+                
+                    <label class="labelFormulario" for="email">Correo electrónico</label>
+                    <input class="inputFormulario" type="email" name="email" placeholder="Ingresá tu email" required>
+                
+                    <label class="labelFormulario" for="tipoConsulta">Tipo de cosulta</label>
+                    <select class="selectFormulario" name="tipoConsulta">
+                        <option class="selectFormulario__opcion" value="producto">Sobre un producto</option>
+                        <option class="selectFormulario__opcion" value="servicio">Sobre un servicio</option>
+                    </select>
+                </div>
+                
+                <div id="seccionPrincipal__formulario__textarea" class="seccionPrincipal__formulario">
+                    <label class="labelFormulario" for="mensaje">Dejanos tu mensaje</label>
+                    <textarea class="inputFormulario inputFormulario--dimensiones" name="mensaje"></textarea>
+                    <div class="botonesFormulario">
+                        <input class="boton enviar" type="submit" value="Enviar">
+                        <input class="boton borrar" type="reset" value="Borrar">
+                    </div>
+                </div>
+            </form>
+    </section>
+
+    <section class="seccionPrincipal" id="ubicacion">
+
+        <h2 class="seccionPrincipal__titulo">Donde estamos</h2>
+        
+        <div class="seccionPrincipal__contenedorInfo seccionPrincipal__contenedorInfo--mapa">
+            
+            <div class="seccionPrincipal__imagen">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.4374446943807!2d-58.51250264892841!3d-34.49179268039281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0551c54c45d%3A0xc0d37453a358bf4!2sPlaza%20Mart%C3%ADnez!5e0!3m2!1ses-419!2sar!4v1635962232447!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <aside class="seccionPrincipal__texto">
+                <h3 class="seccionPrincipal__subtitulo">Dirección</h3>
+                <p class="seccionPrincipal__parrafo">Monseñor Larumbe 792, San Isidro</p>
+                <h3 class="seccionPrincipal__subtitulo">Teléfono</h3>
+                <p class="seccionPrincipal__parrafo">11-1234-5678 / 4912-1234</p>
+                <h3 class="seccionPrincipal__subtitulo">Correo electrónico</h3>
+                <p class="seccionPrincipal__parrafo">shoptelescopios@gmail.com</p>
+            </aside>
+
+        </div>
+        
+    </section>
+
+     <!--Pie de la pagina con el nombre del comercio y un link para volver al encabezado-->
+     <footer class="footer">
+        <p class="footer__copyright"><span class="footer__bold">Shop de Telescopios.</span> Copyright. Todos los derechos reservados.</p>
+        <p class="footer__link"><a href="#encabezado">Ir Arriba</a></p>
+    </footer>
+   
+</body>
+</html>

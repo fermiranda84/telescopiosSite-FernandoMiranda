@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="./js/topNav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shop Telescopios</title>
+</head>
+<body>
+
+    <!--Seccion encabezado que incluye el nav con una lista desordenada y una imagen + texto-->
+    <header id="encabezado">
+
+        <nav class="nav">
+            <ul class="nav__link__principales">
+                <li class="nav__link nav__link--activo"><a href="./index.html"><img class="nav__img" src="./images/logo-01.png" alt="Telescope Logo">Shop de Telescopios</a></li>
+                <li class="nav__link nav__link__iconoMenu"><a href="javascript:void(0);" onclick="mostrarMenu()"><i class="fa fa-bars"></i></a></li>
+            </ul>
+            <ul id="linksSecundarios" class="nav__link__secundarios">
+                <li class="nav__link nav__link--vertical"><a href="./sections/nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav__link nav__link--vertical"><a href="./sections/productos.html">Productos</a></li>
+                <li class="nav__link nav__link--vertical"><a href="./sections/historia.html">Historia</a></li>
+                <li class="nav__link nav__link--vertical"><a href="./sections/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="slide">
+            <div class="slide__textos">
+                <h1 class="slide__titulo">Telescopios</h1>
+                <p class="slide__bajada">Mirá tu mundo, de otra manera.</p>
+            </div>
+            <div class="slide__imagen"><img class="slide__imagen__moon" src="./images/moon.png" alt="Moon"></div>
+        </div>
+
+    </header>
+
+
+    <!--Seccion principal con productos destacados-->
+    <section class="seccionPrincipal" id="productosDestacados">
+
+        <div class="seccionPrincipal__items seccionPrincipal__items--destacados">
+            
+            <h2 class="seccionPrincipal__titulo">Productos Destacados</h2>
+
+                <div id="seccionPrincipal__itemUno" class="seccionPrincipal__item">
+                    <img class="imagenItem imagenItem--destacada" src="./images/braun-20-60x60.jpg" alt="Telescopio Braun">
+                    <h3 class="tituloItem tituloItem--destacado">Braun 20-60x60</h3>
+                    <h4 class="infoItem"><i><a href="#">+ info</a></i></h4>
+                </div>
+
+                <div id="seccionPrincipal__itemDos" class="seccionPrincipal__item">
+                    <img class="imagenItem imagenItem--destacada" src="./images/celestron-explorer-127az.jpg" alt="Telescopio Celestron">
+                    <h3 class="tituloItem tituloItem--destacado">Celestron Explorer 127AZ</h3>
+                    <h4 class="infoItem"><i><a href="#">+ info</a></i></h4>
+                </div>
+
+                <div id="seccionPrincipal__itemTres" class="seccionPrincipal__item">
+                    <img class="imagenItem imagenItem--destacada" src="./images/gadnic-700x76.jpg" alt="Telescopio Galileo">
+                    <h3 class="tituloItem tituloItem--destacado">Gadnic 700x76</h3>
+                    <h4 class="infoItem"><a href="#">+ info</a></h4>
+                </div>
+
+        </div>
+        
+    </section>
+
+    <!--Pie de la pagina con el nombre del comercio y un link para volver al encabezado-->
+    <footer class="footer">
+        <p class="footer__copyright"><span class="footer__bold">Shop de Telescopios.</span> Copyright. Todos los derechos reservados.</p>
+        <p class="footer__link"><a href="#encabezado">Ir Arriba</a></p>
+    </footer>
+
+</body>
+</html>
