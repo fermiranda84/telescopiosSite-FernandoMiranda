@@ -1,2 +1,3 @@
 # telescopiosSite
-Repositorio Sitio Telescopios - HTML - CSS - FULL RESPONSIVE - MOBILE FIRST
+##Repositorio Sitio Telescopios
+Desarrollo de sitio web enteramente con CSS, y HTML. Full responsive (Mobile First)
