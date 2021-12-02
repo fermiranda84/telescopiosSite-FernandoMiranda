@@ -191,6 +191,11 @@ ul{
 .seccionPrincipal__item {
     margin: 1.5rem;
     text-align: center;
+    transition: all 1s;
+}
+
+.seccionPrincipal__item:hover {
+    transform: scale(1.15);
 }
 
 #seccionPrincipal__itemUno{
@@ -329,7 +334,7 @@ ul{
 
 /* Estilos para el pie del sitio */
 .footer {
-    background-color: black;
+    background: linear-gradient(to right, black, dimgrey);
     color: white;
     padding: 1rem;
     margin-top: 2rem;
