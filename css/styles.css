@@ -43,52 +43,9 @@ ul{
     background-color: rgba(0, 0, 0, 0.25)
 }
 
-.nav__link__principales{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.nav__link {
-    
-    margin: 0.5rem 1rem 0.5rem 1rem;
-}
-
-.nav__link--vertical {
-    text-align: right;
-}
-
-.nav__link a {
-    color: white;
-}
-
-.nav__link--activo {
-    font-weight: bold;
-}
-
 .nav__img {
     width: 50px;
-    margin-right: 5px;
     vertical-align: middle;
-}
-
-.nav__link__secundarios {
-    display: none;
-}
-
-.nav__link__iconoMenu {
-    color: white;
-    font-size: 1.5rem;
-    vertical-align: middle;
-    margin-left: auto;
-}
-
-.nav__link__secundarios--show {
-    display: flex;
-    flex-direction: column;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.25)
 }
 
 /* Estilos para el banner con imagen y texto del sitio */
@@ -151,12 +108,6 @@ ul{
 }
 
 /* Estilos para la seccion prinicipal y los elementos dentro */
-.seccionPrincipal{
-    width: 75vw;
-    margin: 2rem auto 0 auto;
-    margin-top: 2rem;
-}
-
 .seccionPrincipal__items {
     display: grid;
     gap: 10px;
@@ -175,19 +126,13 @@ ul{
     grid-area: titulo;
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 
 .seccionPrincipal__parrafo {
     font-size: 1.20rem;
 }
 
-.seccionPrincipal__items {
-    margin-top: 2rem;
-}
-
 .seccionPrincipal__item {
-    margin: 1.5rem;
     text-align: center;
     transition: all 1s;
 }
@@ -209,7 +154,6 @@ ul{
 }
 
 .seccionPrincipal__contenedorInfo {
-    margin-top: 2rem;
     color: white;
     display: grid;
     gap: 10px;
@@ -221,7 +165,6 @@ ul{
 }
 
 .seccionPrincipal__contenedorHistoria {
-    margin-top: 2rem;
     color: white;
     grid-template-areas:
     "titulo" 
@@ -234,11 +177,9 @@ ul{
 
 .seccionPrincipal__imgHistoria{
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .seccionPrincipal__parrafoHistoria {
-    margin-bottom: 20px;
     font-size: 1.20rem;
 }
 
@@ -260,7 +201,6 @@ ul{
 
 .seccionPrincipal__imagen{
     grid-area: foto;
-    margin-top: 1rem;
 }
 
 .seccionPrincipal__imagen--ancho{
@@ -268,7 +208,6 @@ ul{
 }
 
 .seccionPrincipal__subtitulo {
-    margin-top: 0.75rem;
     color: orangered;
     font-weight: bold;
 }
@@ -284,7 +223,6 @@ ul{
 }
 
 #seccionPrincipal__formulario {
-    margin-top: 2rem;
     color: white;
     display: grid;
     gap: 10px;
@@ -316,11 +254,6 @@ ul{
 
 .tituloItem{
     color: white;
-    margin-top: 1rem;
-}
-
-.infoItem{
-    margin-top: 0.5rem;
 }
 
 .tituloItem--destacado{
@@ -334,10 +267,8 @@ ul{
 
 /* Estilos para el pie del sitio */
 .footer {
-    background: linear-gradient(to right, black, dimgrey);
+    background: linear-gradient(to right, black, #1B2631);
     color: white;
-    padding: 1rem;
-    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
