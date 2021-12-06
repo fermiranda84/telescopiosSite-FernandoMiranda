@@ -38,11 +38,6 @@ ul{
 .nav {
     font-family: fuenteMenu;
     border-bottom: white solid 1px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.25)
@@ -183,6 +178,10 @@ ul{
     margin-bottom: 2rem;
 }
 
+.seccionPrincipal__parrafo {
+    font-size: 1.20rem;
+}
+
 .seccionPrincipal__items {
     margin-top: 2rem;
 }
@@ -240,6 +239,7 @@ ul{
 
 .seccionPrincipal__parrafoHistoria {
     margin-bottom: 20px;
+    font-size: 1.20rem;
 }
 
 #parrafoUno{
@@ -270,6 +270,7 @@ ul{
 .seccionPrincipal__subtitulo {
     margin-top: 0.75rem;
     color: orangered;
+    font-weight: bold;
 }
 
 .seccionPrincipal__imagen iframe{
@@ -320,7 +321,6 @@ ul{
 
 .infoItem{
     margin-top: 0.5rem;
-    font-style: italic;
 }
 
 .tituloItem--destacado{
@@ -329,6 +329,7 @@ ul{
 
 .infoItem a{
     color: orangered;
+    font-weight: bold;
 }
 
 /* Estilos para el pie del sitio */
