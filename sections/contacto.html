@@ -53,33 +53,43 @@
     <!--Seccion principal con el formulario de contacto-->
     <section class="container" id="contacto">
 
-            <form id="seccionPrincipal__formulario" action="#" method="post">
+      <form action="#" method="post">
 
-                <h2 class="seccionPrincipal__titulo mb-5">Escribinos</h2>
+        <h2 class="seccionPrincipal__titulo mb-4">Escribinos</h2>
 
-                <div id="seccionPrincipal__formulario__inputs" class="seccionPrincipal__formulario">
-                    <label class="labelFormulario" for="nombre">Nombre</label>
-                    <input class="inputFormulario" type="text" name="nombre" placeholder="Ingresá tu nombre" required>
+        <div class="row g-3">
+
+          <div class="col-lg-4 col-sm-12">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" class="form-control" aria-label="nombre" id="nombre" required>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" class="form-control" aria-label="email" id="email" required>
+          </div>
+
+          <div class="col-lg-4 col-sm-12">
+            <label for="tipoConsulta">Tipo de consulta</label>
+            <select class="form-select" name="tipoConsulta" aria-label="tipoConsulta" id="tipoConsulta">
+              <option selected>Seleccionar</option>
+              <option value="producto">Sobre un producto</option>
+              <option value="servicio">Sobre un servicio</option>
+            </select>
+          </div>
                 
-                    <label class="labelFormulario" for="email">Correo electrónico</label>
-                    <input class="inputFormulario" type="email" name="email" placeholder="Ingresá tu email" required>
-                
-                    <label class="labelFormulario" for="tipoConsulta">Tipo de cosulta</label>
-                    <select class="selectFormulario" name="tipoConsulta">
-                        <option class="selectFormulario__opcion" value="producto">Sobre un producto</option>
-                        <option class="selectFormulario__opcion" value="servicio">Sobre un servicio</option>
-                    </select>
-                </div>
-                
-                <div id="seccionPrincipal__formulario__textarea" class="seccionPrincipal__formulario">
-                    <label class="labelFormulario" for="mensaje">Dejanos tu mensaje</label>
-                    <textarea class="inputFormulario inputFormulario--dimensiones" name="mensaje"></textarea>
-                    <div class="botonesFormulario">
-                        <input class="boton enviar" type="submit" value="Enviar">
-                        <input class="boton borrar" type="reset" value="Borrar">
-                    </div>
-                </div>
-            </form>
+          <div class="col-12">
+            <label for="mensaje">Mensaje</label>
+            <textarea class="form-control inputFormulario--dimensiones" name="mensaje" id="exampleFormControlTextarea1" itemid="mensaje"></textarea>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" class="btn btn-outline-light btn-lg">Enviar</button>
+          </div>
+
+        </div>
+
+      </form>
 
     </section>
 
