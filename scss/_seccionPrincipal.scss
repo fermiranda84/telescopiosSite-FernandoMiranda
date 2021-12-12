@@ -1,0 +1,211 @@
+/* Estilos para la seccion prinicipal y los elementos dentro */
+.seccionPrincipal__items {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: $principalSmall;
+
+    .seccionPrincipal__item {
+        text-align: center;
+        transition: all 1s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+
+        /* Estilos para los items que muestro en las secciones */
+        .imagenItem {
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px $colorNegro;
+            width: 30vw;
+            transition: all 1s;
+
+            &:hover {
+                box-shadow: 0px 0px 20px $colorBlanco;
+            }
+        }
+        
+        .imagenItem--destacada {
+            width: 45vw;
+        }
+        
+        .tituloItem {
+            color: $colorBlanco;
+        }
+        
+        .tituloItem--destacado {
+            font-size: 1.25rem;
+        }
+        
+        .infoItem {
+            a {
+                color: $colorNaranja;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    #seccionPrincipal__itemUno {
+        grid-area: itemUno;
+    }
+    
+    #seccionPrincipal__itemDos {
+        grid-area: itemDos;
+    }
+    
+    #seccionPrincipal__itemTres {
+        grid-area: itemTres;
+    }
+}
+
+.seccionPrincipal__contenedorInfo {
+    color: $colorBlanco;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: $principalInfo;
+
+    .seccionPrincipal__texto {
+        grid-area: parrafos;
+
+        .seccionPrincipal__subtitulo {
+            color: $colorNaranja;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+    
+        .seccionPrincipal__parrafo {
+            font-size: 1.20rem;
+        }
+    }
+
+    .seccionPrincipal__imagen {
+        grid-area: foto;
+
+        iframe {
+            width: 100%;
+            height: 48vh;
+            border: 0;
+        }
+    }
+    
+    .seccionPrincipal__imagen--ancho {
+        width: 100%;
+    }
+}
+
+.seccionPrincipal__titulo {
+    font-size: 5vw;
+    color: $colorBlanco;
+    text-transform: uppercase;
+    grid-area: titulo;
+    display: flex;
+    justify-content: center;
+}
+
+.seccionPrincipal__contenedorHistoria {
+    color: $colorBlanco;
+    grid-template-areas: $principalHistoria;
+
+    .seccionPrincipal__parrafoHistoria {
+        font-size: 1.20rem;
+    }
+    
+    #parrafoUno {
+        grid-area: parrafoUno;
+    }
+    
+    #parrafoDos {
+        grid-area: parrafoDos;
+    }
+    
+    #parrafoTres {
+        grid-area: parrafoTres;
+    }
+    
+    #imagenHistoria {
+        grid-area: foto;
+
+        .seccionPrincipal__imgHistoria {
+            width: 100%;
+        }
+    }
+}
+
+/* Estilos para el formulario de contacto */
+
+.inputFormulario--dimensiones {
+    resize: none;
+    height: 12rem;
+}
+
+label {
+    color: $colorBlanco;
+}
+
+input, select, textarea, button {
+    font-family: $fuenteStandard;
+}
+
+/*Responsive*/
+
+/*Tablets*/
+
+@media screen and (min-width:768px) {
+    .seccionPrincipal__items {
+        grid-template-areas: $principalMedium;
+
+        .seccionPrincipal__item {
+
+            .imagenItem--destacada {
+                width: 30vw;
+            } 
+            
+            .tituloItem--destacado {
+                font-size: 1.25rem;
+            }
+
+        }
+
+    }
+    
+    .seccionPrincipal__titulo {
+        font-size: 3.5vw;
+        justify-content: start;
+    }
+}
+
+/*Desktops*/
+@media screen and (min-width:1200px) {
+
+    .seccionPrincipal__items {
+        grid-template-areas: $principalLarge;
+
+        .seccionPrincipal__item {
+
+            .imagenItem {
+                width: 15vw;
+            }
+    
+            .imagenItem--destacada {
+                width: 20vw;
+            }
+
+        }
+
+    }
+
+    .seccionPrincipal__titulo {
+        font-size: 2.5vw;
+    }
+
+    .seccionPrincipal__contenedorInfo {
+        gap: 50px;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas: $principalInfoLarge;
+    }
+
+    .seccionPrincipal__contenedorInfo--mapa {
+        grid-template-columns: 1fr 2fr;
+    }
+        
+}

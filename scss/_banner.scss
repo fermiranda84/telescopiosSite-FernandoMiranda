@@ -1,0 +1,104 @@
+/* Estilos para el banner con imagen y texto del sitio */
+.slide {
+    position: relative;
+    text-align: center;
+    color: $colorBlanco;
+    display: grid;
+    grid-template-areas: $bannerSmall;
+
+    .slide__imagen {
+        grid-area: moon;
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+                transform: translate(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0px);
+             }
+        }
+        
+        .slide__imagen__moon {
+            width: 80%;
+        }
+    }
+    
+    .slide__textos {
+        grid-area: telescopios;
+        margin-top: 7rem;
+        animation: fadeInText ease 3s;
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+             }
+        }
+        
+        .slide__titulo {
+            font-size: 10vw;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 5px $colorNegro;
+        }
+        
+        .slide__bajada {
+            font-size: 5vw;
+        }
+    }
+}
+
+/*Responsive*/
+
+/*Tablets*/
+
+@media screen and (min-width:768px) {
+    .slide {
+        grid-template-areas: $bannerMedium;
+        grid-template-columns: 2fr 1.25fr;
+
+        .slide__textos {
+            margin-top: 11rem;
+
+            .slide__titulo {
+                font-size: 8vw;
+            }
+        
+            .slide__bajada {
+                font-size: 3vw;
+            }
+        }
+        
+        .slide__imagen {
+           margin-top: 5rem;
+
+           .slide__imagen__moon {
+               width: 100%;
+           }
+        }
+    }
+}
+
+/*Desktops*/
+@media screen and (min-width:1200px) {
+    .slide {
+
+        .slide__textos {
+            margin-top: 20rem;
+    
+            .slide__titulo {
+                font-size: 7vw;
+            }
+        
+            .slide__bajada {
+                font-size: 2vw;
+            }
+        }
+
+    }
+}

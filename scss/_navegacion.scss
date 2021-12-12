@@ -1,0 +1,32 @@
+/* Estilos de la barra de navegacion */
+.nav {
+    font-family: fuenteMenu;
+    border-bottom: $colorBlanco solid 1px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
+    background-color: $negroTransparente;
+
+    .nav__img {
+        width: 50px;
+        vertical-align: middle;
+    }
+}
+
+/*Responsive*/
+
+/*Tablets*/
+
+@media screen and (min-width:768px) {
+    .nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*Telefonos antiguos*/
+
+@media screen and (max-width:354px) {
+    .nav__img {
+        display: none;
+    }
+}

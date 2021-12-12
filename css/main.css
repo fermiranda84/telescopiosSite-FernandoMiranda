@@ -1,0 +1,336 @@
+/*Variables SASS para colores mas utilizados*/
+/*Variables SASS para estructura Grid*/
+/* Fuentes utilizadas en el sitio */
+@font-face {
+  font-family: fuenteProyecto;
+  src: url(../fonts/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: fuenteMenu;
+  src: url(../fonts/Montserrat-Light.ttf);
+}
+/* Estilos de la barra de navegacion */
+.nav {
+  font-family: fuenteMenu;
+  border-bottom: white solid 1px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.nav .nav__img {
+  width: 50px;
+  vertical-align: middle;
+}
+
+/*Responsive*/
+/*Tablets*/
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+/*Telefonos antiguos*/
+@media screen and (max-width: 354px) {
+  .nav__img {
+    display: none;
+  }
+}
+/* Estilos para el banner con imagen y texto del sitio */
+.slide {
+  position: relative;
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-areas: "telescopios" "moon";
+}
+.slide .slide__imagen {
+  grid-area: moon;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+.slide .slide__imagen .slide__imagen__moon {
+  width: 80%;
+}
+.slide .slide__textos {
+  grid-area: telescopios;
+  margin-top: 7rem;
+  animation: fadeInText ease 3s;
+}
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.slide .slide__textos .slide__titulo {
+  font-size: 10vw;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px black;
+}
+.slide .slide__textos .slide__bajada {
+  font-size: 5vw;
+}
+
+/*Responsive*/
+/*Tablets*/
+@media screen and (min-width: 768px) {
+  .slide {
+    grid-template-areas: "telescopios moon";
+    grid-template-columns: 2fr 1.25fr;
+  }
+  .slide .slide__textos {
+    margin-top: 11rem;
+  }
+  .slide .slide__textos .slide__titulo {
+    font-size: 8vw;
+  }
+  .slide .slide__textos .slide__bajada {
+    font-size: 3vw;
+  }
+  .slide .slide__imagen {
+    margin-top: 5rem;
+  }
+  .slide .slide__imagen .slide__imagen__moon {
+    width: 100%;
+  }
+}
+/*Desktops*/
+@media screen and (min-width: 1200px) {
+  .slide .slide__textos {
+    margin-top: 20rem;
+  }
+  .slide .slide__textos .slide__titulo {
+    font-size: 7vw;
+  }
+  .slide .slide__textos .slide__bajada {
+    font-size: 2vw;
+  }
+}
+/* Estilos para la seccion prinicipal y los elementos dentro */
+.seccionPrincipal__items {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "titulo" "itemUno" "itemDos" "itemTres";
+}
+.seccionPrincipal__items .seccionPrincipal__item {
+  text-align: center;
+  transition: all 1s;
+  /* Estilos para los items que muestro en las secciones */
+}
+.seccionPrincipal__items .seccionPrincipal__item:hover {
+  transform: scale(1.15);
+}
+.seccionPrincipal__items .seccionPrincipal__item .imagenItem {
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px black;
+  width: 30vw;
+  transition: all 1s;
+}
+.seccionPrincipal__items .seccionPrincipal__item .imagenItem:hover {
+  box-shadow: 0px 0px 20px white;
+}
+.seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada {
+  width: 45vw;
+}
+.seccionPrincipal__items .seccionPrincipal__item .tituloItem {
+  color: white;
+}
+.seccionPrincipal__items .seccionPrincipal__item .tituloItem--destacado {
+  font-size: 1.25rem;
+}
+.seccionPrincipal__items .seccionPrincipal__item .infoItem a {
+  color: orangered;
+  font-weight: bold;
+}
+.seccionPrincipal__items #seccionPrincipal__itemUno {
+  grid-area: itemUno;
+}
+.seccionPrincipal__items #seccionPrincipal__itemDos {
+  grid-area: itemDos;
+}
+.seccionPrincipal__items #seccionPrincipal__itemTres {
+  grid-area: itemTres;
+}
+
+.seccionPrincipal__contenedorInfo {
+  color: white;
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "titulo" "parrafos" "foto";
+}
+.seccionPrincipal__contenedorInfo .seccionPrincipal__texto {
+  grid-area: parrafos;
+}
+.seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__subtitulo {
+  color: orangered;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__parrafo {
+  font-size: 1.2rem;
+}
+.seccionPrincipal__contenedorInfo .seccionPrincipal__imagen {
+  grid-area: foto;
+}
+.seccionPrincipal__contenedorInfo .seccionPrincipal__imagen iframe {
+  width: 100%;
+  height: 48vh;
+  border: 0;
+}
+.seccionPrincipal__contenedorInfo .seccionPrincipal__imagen--ancho {
+  width: 100%;
+}
+
+.seccionPrincipal__titulo {
+  font-size: 5vw;
+  color: white;
+  text-transform: uppercase;
+  grid-area: titulo;
+  display: flex;
+  justify-content: center;
+}
+
+.seccionPrincipal__contenedorHistoria {
+  color: white;
+  grid-template-areas: "titulo" "parrafoUno" "foto" "parrafoDos" "parrafoTres";
+}
+.seccionPrincipal__contenedorHistoria .seccionPrincipal__parrafoHistoria {
+  font-size: 1.2rem;
+}
+.seccionPrincipal__contenedorHistoria #parrafoUno {
+  grid-area: parrafoUno;
+}
+.seccionPrincipal__contenedorHistoria #parrafoDos {
+  grid-area: parrafoDos;
+}
+.seccionPrincipal__contenedorHistoria #parrafoTres {
+  grid-area: parrafoTres;
+}
+.seccionPrincipal__contenedorHistoria #imagenHistoria {
+  grid-area: foto;
+}
+.seccionPrincipal__contenedorHistoria #imagenHistoria .seccionPrincipal__imgHistoria {
+  width: 100%;
+}
+
+/* Estilos para el formulario de contacto */
+.inputFormulario--dimensiones {
+  resize: none;
+  height: 12rem;
+}
+
+label {
+  color: white;
+}
+
+input, select, textarea, button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Responsive*/
+/*Tablets*/
+@media screen and (min-width: 768px) {
+  .seccionPrincipal__items {
+    grid-template-areas: "titulo titulo" "itemUno itemDos" "itemTres itemTres";
+  }
+  .seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada {
+    width: 30vw;
+  }
+  .seccionPrincipal__items .seccionPrincipal__item .tituloItem--destacado {
+    font-size: 1.25rem;
+  }
+
+  .seccionPrincipal__titulo {
+    font-size: 3.5vw;
+    justify-content: start;
+  }
+}
+/*Desktops*/
+@media screen and (min-width: 1200px) {
+  .seccionPrincipal__items {
+    grid-template-areas: "titulo titulo titulo" "itemUno itemDos itemTres";
+  }
+  .seccionPrincipal__items .seccionPrincipal__item .imagenItem {
+    width: 15vw;
+  }
+  .seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada {
+    width: 20vw;
+  }
+
+  .seccionPrincipal__titulo {
+    font-size: 2.5vw;
+  }
+
+  .seccionPrincipal__contenedorInfo {
+    gap: 50px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "titulo titulo" "parrafos foto";
+  }
+
+  .seccionPrincipal__contenedorInfo--mapa {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+/* Estilos para el pie del sitio */
+.footer {
+  background: linear-gradient(to right, black, #1B2631);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer .footer__copyright span {
+  font-weight: bold;
+}
+.footer .footer__link {
+  display: none;
+}
+.footer .footer__link a {
+  color: white;
+}
+
+/*Responsive*/
+/*Tablets*/
+@media screen and (min-width: 768px) {
+  .footer {
+    justify-content: start;
+  }
+  .footer .footer__link {
+    display: flex;
+    margin-left: auto;
+  }
+}
+/* Inicializacion para sacar el padding y margin por defecto */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Propiedades para el sitio en general */
+body {
+  background: url(../images/starsBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #252526;
+  font-family: fuenteProyecto;
+}
+
+/* Links sin estilo por defecto */
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */

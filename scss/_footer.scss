@@ -1,0 +1,38 @@
+/* Estilos para el pie del sitio */
+.footer {
+    background: linear-gradient(to right, $colorNegro, $azulGris);
+    color: $colorBlanco;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .footer__copyright {
+        span {
+            font-weight: bold;
+        }
+    }
+    
+    .footer__link {
+        display: none;
+
+        a {
+            color: $colorBlanco;
+        }
+    }
+    
+}
+
+/*Responsive*/
+
+/*Tablets*/
+@media screen and (min-width:768px) {
+    .footer {
+        justify-content: start;
+
+        .footer__link {
+            display: flex;
+            margin-left: auto;
+        }
+    }
+
+}

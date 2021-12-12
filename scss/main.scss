@@ -1,0 +1,27 @@
+@import "colores";
+@import "estructura";
+@import "fuentes";
+@import "navegacion";
+@import "banner";
+@import "seccionPrincipal";
+@import "footer";
+
+/* Inicializacion para sacar el padding y margin por defecto */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Propiedades para el sitio en general */
+body {
+    background: url(../images/starsBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #252526;
+    font-family: fuenteProyecto;
+} 
+
+/* Links sin estilo por defecto */
+a {
+    text-decoration: none;
+}
