@@ -2,23 +2,64 @@
 .footer {
     background: linear-gradient(to right, $colorNegro, $azulGris);
     color: $colorBlanco;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
-    .footer__copyright {
-        span {
-            font-weight: bold;
+    .footer__map {
+        display: grid;
+        grid-template-areas: $footerSmall;
+        justify-content: center;
+
+        #mapHome {
+            grid-area: mapHome;
         }
-    }
-    
-    .footer__link {
-        display: none;
 
-        a {
+        #mapNosotros {
+            grid-area: mapNosotros;
+        }
+
+        #mapProductos {
+            grid-area: mapProductos;
+        }
+
+        #mapHistoria {
+            grid-area: mapHistoria;
+        }
+
+        #mapContacto {
+            grid-area: mapContacto;
+        }
+
+        .footer__map--noBullets {
+           list-style-type: none; 
+        }
+
+        .footer__map--noBullets li a {
             color: $colorBlanco;
         }
     }
+
+    .footer__info {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10vw;
+
+        .footer__copyright {
+            span {
+                font-weight: bold;
+            }
+        }
+        
+        .footer__link {
+            display: none;
+    
+            a {
+                color: $colorBlanco;
+            }
+        }
+
+    }
+
     
 }
 
@@ -29,9 +70,30 @@
     .footer {
         justify-content: start;
 
-        .footer__link {
-            display: flex;
-            margin-left: auto;
+        .footer__map {
+            grid-template-areas: $footerMedium;
+        }
+
+        .footer__info {
+            margin-top: 5vw;
+
+            .footer__link {
+                display: flex;
+                margin-left: auto;
+            }
+        }
+
+
+    }
+
+}
+
+/*Desktops*/
+@media screen and (min-width:1200px) {
+
+    .footer {
+        .footer__info {
+            margin-top: 3vw;
         }
     }
 

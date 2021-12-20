@@ -1,3 +1,13 @@
+@import "tamanoFuente";
+
+/*Mixin para imagenes de items*/
+@mixin imagenItems ($b:0, $bs:0, $w:0, $t:0, $ba:border-radius, $bsa:box-shadow, $wa: width, $ta: transition) {
+    #{$ba}:$b;
+    #{$bsa}:$bs;
+    #{$wa}:$w;
+    #{$ta}:$t;
+}
+
 /* Estilos para la seccion prinicipal y los elementos dentro */
 .seccionPrincipal__items {
     display: grid;
@@ -14,10 +24,7 @@
 
         /* Estilos para los items que muestro en las secciones */
         .imagenItem {
-            border-radius: 50%;
-            box-shadow: 1px 1px 5px $colorNegro;
-            width: 30vw;
-            transition: all 1s;
+            @include imagenItems (50%, 1px 1px 5px $colorNegro, 30vw, all 1s);
 
             &:hover {
                 box-shadow: 0px 0px 20px $colorBlanco;
@@ -25,6 +32,7 @@
         }
         
         .imagenItem--destacada {
+            @extend .imagenItem;
             width: 45vw;
         }
         
@@ -33,7 +41,7 @@
         }
         
         .tituloItem--destacado {
-            font-size: 1.25rem;
+            font-size: $h4;
         }
         
         .infoItem {
@@ -70,11 +78,11 @@
         .seccionPrincipal__subtitulo {
             color: $colorNaranja;
             font-weight: bold;
-            font-size: 1.25rem;
+            font-size: $h5;
         }
     
         .seccionPrincipal__parrafo {
-            font-size: 1.20rem;
+            font-size: $h6;
         }
     }
 
@@ -94,7 +102,7 @@
 }
 
 .seccionPrincipal__titulo {
-    font-size: 5vw;
+    font-size: $h4;
     color: $colorBlanco;
     text-transform: uppercase;
     grid-area: titulo;
@@ -107,7 +115,7 @@
     grid-template-areas: $principalHistoria;
 
     .seccionPrincipal__parrafoHistoria {
-        font-size: 1.20rem;
+        font-size: $h6;
     }
     
     #parrafoUno {
@@ -161,16 +169,39 @@ input, select, textarea, button {
             } 
             
             .tituloItem--destacado {
-                font-size: 1.25rem;
+                font-size: $h6;
             }
 
         }
 
     }
+
+    .seccionPrincipal__contenedorInfo {
+
+        .seccionPrincipal__texto {
+
+            .seccionPrincipal__subtitulo {
+                font-size: $h6;
+            }
+        
+            .seccionPrincipal__parrafo {
+                font-size: $h7;
+            }
+        }
+        
+    }
     
     .seccionPrincipal__titulo {
-        font-size: 3.5vw;
+        font-size: $h5;
         justify-content: start;
+    }
+
+    .seccionPrincipal__contenedorHistoria {
+    
+        .seccionPrincipal__parrafoHistoria {
+            font-size: $h7;
+        }
+
     }
 }
 
@@ -183,11 +214,15 @@ input, select, textarea, button {
         .seccionPrincipal__item {
 
             .imagenItem {
-                width: 15vw;
+               width: 15vw;
             }
     
             .imagenItem--destacada {
                 width: 20vw;
+            }
+
+            .tituloItem--destacado {
+                font-size: $h7;
             }
 
         }
@@ -195,17 +230,48 @@ input, select, textarea, button {
     }
 
     .seccionPrincipal__titulo {
-        font-size: 2.5vw;
+        font-size: $h6;
     }
 
     .seccionPrincipal__contenedorInfo {
         gap: 50px;
         grid-template-columns: 2fr 2fr;
         grid-template-areas: $principalInfoLarge;
+
+        .seccionPrincipal__texto {
+
+            .seccionPrincipal__subtitulo {
+                font-size: $h7;
+            }
+        
+            .seccionPrincipal__parrafo {
+                font-size: $h8;
+            }
+        }
     }
 
     .seccionPrincipal__contenedorInfo--mapa {
         grid-template-columns: 1fr 2fr;
     }
+
+    .seccionPrincipal__contenedorHistoria {
+    
+        .seccionPrincipal__parrafoHistoria {
+            font-size: $h7;
+        }
         
+    }
+        
+}
+
+@media screen and (min-width:1600px) {
+
+    .seccionPrincipal__contenedorHistoria {
+    
+        .seccionPrincipal__parrafoHistoria {
+            font-size: $h8;
+        }
+        
+    }
+
 }

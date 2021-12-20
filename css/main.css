@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Variables SASS para colores mas utilizados*/
 /*Variables SASS para estructura Grid*/
 /* Fuentes utilizadas en el sitio */
@@ -22,6 +23,10 @@
   vertical-align: middle;
 }
 
+.breadcrumb a, .breadcrumb, .container--breadcrumb {
+  color: white;
+}
+
 /*Responsive*/
 /*Tablets*/
 @media screen and (min-width: 768px) {
@@ -36,6 +41,7 @@
     display: none;
   }
 }
+/*Map para los tamaños de fuentes*/
 /* Estilos para el banner con imagen y texto del sitio */
 .slide {
   position: relative;
@@ -119,6 +125,8 @@
     font-size: 2vw;
   }
 }
+/*Map para los tamaños de fuentes*/
+/*Mixin para imagenes de items*/
 /* Estilos para la seccion prinicipal y los elementos dentro */
 .seccionPrincipal__items {
   display: grid;
@@ -133,13 +141,13 @@
 .seccionPrincipal__items .seccionPrincipal__item:hover {
   transform: scale(1.15);
 }
-.seccionPrincipal__items .seccionPrincipal__item .imagenItem {
+.seccionPrincipal__items .seccionPrincipal__item .imagenItem, .seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada {
   border-radius: 50%;
   box-shadow: 1px 1px 5px black;
   width: 30vw;
   transition: all 1s;
 }
-.seccionPrincipal__items .seccionPrincipal__item .imagenItem:hover {
+.seccionPrincipal__items .seccionPrincipal__item .imagenItem:hover, .seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada:hover {
   box-shadow: 0px 0px 20px white;
 }
 .seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada {
@@ -149,7 +157,7 @@
   color: white;
 }
 .seccionPrincipal__items .seccionPrincipal__item .tituloItem--destacado {
-  font-size: 1.25rem;
+  font-size: 5vw;
 }
 .seccionPrincipal__items .seccionPrincipal__item .infoItem a {
   color: orangered;
@@ -177,10 +185,10 @@
 .seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__subtitulo {
   color: orangered;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 4vw;
 }
 .seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__parrafo {
-  font-size: 1.2rem;
+  font-size: 3vw;
 }
 .seccionPrincipal__contenedorInfo .seccionPrincipal__imagen {
   grid-area: foto;
@@ -208,7 +216,7 @@
   grid-template-areas: "titulo" "parrafoUno" "foto" "parrafoDos" "parrafoTres";
 }
 .seccionPrincipal__contenedorHistoria .seccionPrincipal__parrafoHistoria {
-  font-size: 1.2rem;
+  font-size: 3vw;
 }
 .seccionPrincipal__contenedorHistoria #parrafoUno {
   grid-area: parrafoUno;
@@ -250,12 +258,23 @@ input, select, textarea, button {
     width: 30vw;
   }
   .seccionPrincipal__items .seccionPrincipal__item .tituloItem--destacado {
-    font-size: 1.25rem;
+    font-size: 3vw;
+  }
+
+  .seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__subtitulo {
+    font-size: 3vw;
+  }
+  .seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__parrafo {
+    font-size: 2vw;
   }
 
   .seccionPrincipal__titulo {
-    font-size: 3.5vw;
+    font-size: 4vw;
     justify-content: start;
+  }
+
+  .seccionPrincipal__contenedorHistoria .seccionPrincipal__parrafoHistoria {
+    font-size: 2vw;
   }
 }
 /*Desktops*/
@@ -263,15 +282,18 @@ input, select, textarea, button {
   .seccionPrincipal__items {
     grid-template-areas: "titulo titulo titulo" "itemUno itemDos itemTres";
   }
-  .seccionPrincipal__items .seccionPrincipal__item .imagenItem {
+  .seccionPrincipal__items .seccionPrincipal__item .imagenItem, .seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada {
     width: 15vw;
   }
   .seccionPrincipal__items .seccionPrincipal__item .imagenItem--destacada {
     width: 20vw;
   }
+  .seccionPrincipal__items .seccionPrincipal__item .tituloItem--destacado {
+    font-size: 2vw;
+  }
 
   .seccionPrincipal__titulo {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   .seccionPrincipal__contenedorInfo {
@@ -279,26 +301,70 @@ input, select, textarea, button {
     grid-template-columns: 2fr 2fr;
     grid-template-areas: "titulo titulo" "parrafos foto";
   }
+  .seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__subtitulo {
+    font-size: 2vw;
+  }
+  .seccionPrincipal__contenedorInfo .seccionPrincipal__texto .seccionPrincipal__parrafo {
+    font-size: 1vw;
+  }
 
   .seccionPrincipal__contenedorInfo--mapa {
     grid-template-columns: 1fr 2fr;
+  }
+
+  .seccionPrincipal__contenedorHistoria .seccionPrincipal__parrafoHistoria {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .seccionPrincipal__contenedorHistoria .seccionPrincipal__parrafoHistoria {
+    font-size: 1vw;
   }
 }
 /* Estilos para el pie del sitio */
 .footer {
   background: linear-gradient(to right, black, #1B2631);
   color: white;
+}
+.footer .footer__map {
+  display: grid;
+  grid-template-areas: "mapHome mapNosotros" "mapProductos mapHistoria" "mapContacto mapContacto";
+  justify-content: center;
+}
+.footer .footer__map #mapHome {
+  grid-area: mapHome;
+}
+.footer .footer__map #mapNosotros {
+  grid-area: mapNosotros;
+}
+.footer .footer__map #mapProductos {
+  grid-area: mapProductos;
+}
+.footer .footer__map #mapHistoria {
+  grid-area: mapHistoria;
+}
+.footer .footer__map #mapContacto {
+  grid-area: mapContacto;
+}
+.footer .footer__map .footer__map--noBullets {
+  list-style-type: none;
+}
+.footer .footer__map .footer__map--noBullets li a {
+  color: white;
+}
+.footer .footer__info {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 10vw;
 }
-.footer .footer__copyright span {
+.footer .footer__info .footer__copyright span {
   font-weight: bold;
 }
-.footer .footer__link {
+.footer .footer__info .footer__link {
   display: none;
 }
-.footer .footer__link a {
+.footer .footer__info .footer__link a {
   color: white;
 }
 
@@ -308,11 +374,24 @@ input, select, textarea, button {
   .footer {
     justify-content: start;
   }
-  .footer .footer__link {
+  .footer .footer__map {
+    grid-template-areas: "mapHome mapNosotros mapProductos mapHistoria mapContacto mapContacto";
+  }
+  .footer .footer__info {
+    margin-top: 5vw;
+  }
+  .footer .footer__info .footer__link {
     display: flex;
     margin-left: auto;
   }
 }
+/*Desktops*/
+@media screen and (min-width: 1200px) {
+  .footer .footer__info {
+    margin-top: 3vw;
+  }
+}
+/*Map para los tamaños de fuentes*/
 /* Inicializacion para sacar el padding y margin por defecto */
 * {
   margin: 0;

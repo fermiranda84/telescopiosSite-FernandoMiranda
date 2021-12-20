@@ -1,0 +1,20 @@
+/*Map para los tamaños de fuentes*/
+$tamanoFuente: (
+    h1: 10vw,
+    h2: 8vw,
+    h3: 7vw,
+    h4: 5vw,
+    h5: 4vw,
+    h6: 3vw,
+    h7: 2vw,
+    h8: 1vw
+);
+
+$h1: map-get($tamanoFuente, h1 );
+$h2: map-get($tamanoFuente, h2 );
+$h3: map-get($tamanoFuente, h3 );
+$h4: map-get($tamanoFuente, h4 );
+$h5: map-get($tamanoFuente, h5 );
+$h6: map-get($tamanoFuente, h6 );
+$h7: map-get($tamanoFuente, h7 );
+$h8: map-get($tamanoFuente, h8 );
