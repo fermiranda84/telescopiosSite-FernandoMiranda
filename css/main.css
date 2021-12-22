@@ -37,7 +37,7 @@
 }
 /*Telefonos antiguos*/
 @media screen and (max-width: 354px) {
-  .nav__img {
+  .nav__text {
     display: none;
   }
 }
