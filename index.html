@@ -68,19 +68,19 @@
                 <div id="seccionPrincipal__itemUno" class="seccionPrincipal__item mb-4">
                     <img class="imagenItem imagenItem--destacada" src="./images/braun-20-60x60.jpg" alt="Telescopio Braun">
                     <h3 class="tituloItem tituloItem--destacado mt-3">Braun 20-60x60</h3>
-                    <h4 class="infoItem mt-1"><i><a href="#">+ info</a></i></h4>
+                    <h4 class="infoItem mt-1"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalUno">+ info</button></h4>
                 </div>
 
                 <div id="seccionPrincipal__itemDos" class="seccionPrincipal__item mb-4">
                     <img class="imagenItem imagenItem--destacada" src="./images/celestron-explorer-127az.jpg" alt="Telescopio Celestron">
                     <h3 class="tituloItem tituloItem--destacado mt-3">Celestron Explorer 127AZ</h3>
-                    <h4 class="infoItem mt-1"><i><a href="#">+ info</a></i></h4>
+                    <h4 class="infoItem mt-1"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDos">+ info</button></h4>
                 </div>
 
                 <div id="seccionPrincipal__itemTres" class="seccionPrincipal__item mb-4">
                     <img class="imagenItem imagenItem--destacada" src="./images/gadnic-700x76.jpg" alt="Telescopio Galileo">
                     <h3 class="tituloItem tituloItem--destacado mt-3">Gadnic 700x76</h3>
-                    <h4 class="infoItem mt-1"><a href="#">+ info</a></h4>
+                    <h4 class="infoItem mt-1"><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalTres">+ info</button></h4>
                 </div>
 
         </div>
@@ -121,6 +121,61 @@
       </div>
 
     </footer>
+
+    <!-- Modales -->
+    <div class="modal fade" id="modalUno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Braun 20-60x60</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="imagenDetail" src="./images/braun-20-60x60.jpg" alt="Telescopio Braun">
+            <p>Telescopio monocular para observación de la tierra. Ligero y compacto, ideal para la observación de la naturaleza en bosques y campos. Ideal para monitorear deportes y avistar.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalDos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Celestron Explorer 127AZ</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="imagenDetail" src="./images/celestron-explorer-127az.jpg" alt="Telescopio Celestron">
+            <p>La tecnología de reconocimiento del cielo StarSense, galardonada y pendiente de patente, utiliza su teléfono inteligente para analizar los patrones de estrellas en lo alto y calcular su posición en tiempo real.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalTres" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Gadnic 700x76</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="imagenDetail" src="./images/gadnic-700x76.jpg" alt="Telescopio Celestron">
+            <p>El 700x76 es un equipo muy completo que sirve tanto para chicos como para adultos. Se logran ver la mayoría de los objetos de interés astronómico:</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
